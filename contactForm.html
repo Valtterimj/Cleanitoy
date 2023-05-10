@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>ContactForm</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/" id="navbar__logo"><img src="img/Cleanit_logo_bg.png" class="img__navbar" alt=""> Cleanit</a>
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">Koti</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">Palvelut</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">Työmme</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="contactForm.html" class="button">Ota yhteyttä</a>
+                    </li>
+                </ul>
+            </div>       
+        </nav>
+        
+        <div class="formContainer">
+            <h1>Odotamme yhteydenottoasi!</h1>
+            <p>Arvioimme tämän lomakkeen perusteella kenkiesi kuntoa. Kerromme mieluusti miten niistä saadaan puhtaat ja mikä tarvittavan palvelun hinta tulee olemaan, sekä sen kuinka nopeasti kenkäsi ovat valmiina.</p>
+            <form class="contact-form" action="https://formsubmit.co/asiakaspalvelu@cleanitoy.fi" method ="post">
+                <!-- Honeypo -->
+                <input type="text" name="_honey" style="display: none;">
+
+                <!-- Disaple Captcha  -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_next" value="">
+
+                <div class="info">
+                    <h2 class="infoTitle">Yhteistietosi</h2>
+                    <div class="infoBox">
+                        <label for="firstName" class="form-label">Etunimi</label>
+                        <input type="text" class="form-control" name="First&nbsp;Name" id="firstName" required>
+                    </div>
+                    <div class="infoBox">
+                        <label for="lastName" class="form-label">Sukunimi</label>
+                        <input type="text" class="form-control" name="Last&nbsp;Name" id="lastName" required>
+                    </div>
+                    <div class="infoBox">
+                        <label for="email" class="form-label">Sähköposti</label>
+                        <input type="emial" class="form-control" name="Email" id="email" required>
+                    </div>
+                    <div class="infoBox">
+                        <label for="phone" class="form-label">Puhelin</label>
+                        <input type="number" class="form-control" name="Phone" id="phone">
+                    </div>
+                    
+                </div>
+                <div class="service">
+                    <h2 class="serviceTitle">Kekäsi</h2>
+                    <p class="serviceText">Kerro lisätietoa kengistäsi. Onko kengille tiettyjä toiveita pesun lisäksi (pohjan liimaaminen, nahanpaikkaus, maalaus)? Ilmoita myös kenkäparien määrä.</p>
+                    <input type="message" name = "Message" placeholder="Lisätiedot">
+                    <p class="imgText">Lisäämällä kuvan autat meitä arvioimaan kenkäsi kuntoa</p>
+                    <!-- <input type="image" name="Picture" > -->
+                </div>
+
+                <button type="submit" name="Submit">Lähetä</button>
+            </form>
+        </div>
+    </body>
+</html>

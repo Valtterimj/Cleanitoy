@@ -34,18 +34,30 @@ window.addEventListener("scroll", function(){
     } else {
         element.style.opacity = "0.2";
     }
-});
-
-window.addEventListener("scroll", function(){
+    // Palvelu description fade animation
     const elements = this.document.querySelectorAll(".description");
     elements.forEach(e => {
         const position = e.getBoundingClientRect();
         const windowHeight = this.window.innerHeight;
-        if (position.top < windowHeight * 0.8) {
-            e.style.opacity = "1";
-        } else {
+        if (position.top > windowHeight * 0.8) {
             e.style.opacity = "0.2";
+        } else if (position.top <= windowHeight * 0.15) {
+             e.style.opacity = "0.5";
+        } else {
+            e.style.opacity = "1";
         }
     })
+
+    // ServicePic scroll animation
+    const parallaxPic = document.querySelector('.column__right');
+    let scrollPosition = window.pageYOffset;
+
+    console.log(scrollPosition)
+
+    parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .3 + 'px)';
+
 });
+
+
+
 

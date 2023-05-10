@@ -403,7 +403,7 @@
     display: flex;
     padding-top: 50px;
     z-index: 6;
-    height: 250vh;
+    height: 240vh;
     background: #111;
 }
 
@@ -411,6 +411,7 @@
     flex: 8;
     text-align: center;
     margin-left: 50px;
+    z-index: 8;
 }
 
 
@@ -424,7 +425,7 @@
     margin-top: 50px;
 }
 .servicePic:not(first-child) {
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .servicePic{
@@ -435,11 +436,11 @@
 
 
 .description:first-child {
-    margin-top: 50px;
+    margin-top: 180px;
 }
 
 .description:not(first-child){
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 
