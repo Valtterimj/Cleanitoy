@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
 }
 
 .navbar {
@@ -393,11 +392,6 @@
 
 
 /* palvelut section  */
-.palvelut__title {
-    text-align: center;
-    color: #fff;
-    font-size: 2em;
-}
 
 .palvelut {
     display: flex;
@@ -405,22 +399,20 @@
     z-index: 6;
     height: 240vh;
     background: #111;
-}
-
-.column__left{
-    flex: 8;
     text-align: center;
-    margin-left: 50px;
-    z-index: 8;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap:10vmin;
 }
-
 
 .column__right{
-    flex: 10;
-    text-align: center;
-    margin-right: 80px;
+    flex: 3;
 }
 
+.servicePic{
+    height: 350px;
+    width: 350px;
+}
 .servicePic:first-child {
     margin-top: 50px;
 }
@@ -428,13 +420,12 @@
     margin-top: 70px;
 }
 
-.servicePic{
-    height: 350px;
-    width: 350px;
-    border-radius: 15%;
+
+
+
+.column__left{
+    flex: 5;
 }
-
-
 .description:first-child {
     margin-top: 180px;
 }
@@ -447,6 +438,7 @@
 .description {
     color: #fff;
     transition: opacity 1s ease-in-out;
+    max-width: 700px;
 }
 
 .description h3 {
@@ -456,4 +448,156 @@
 .description p {
     font-size: 1.3em;
     margin-top: 15px;
+}
+
+.contact__box {
+    display: flex;
+    height: 20vh;
+    gap: 20px
+}
+.contact__box__left {
+    flex: 3;
+    text-align: left;
+}
+
+.contact__box__left h3 {
+    font-size: 2.3em;
+}
+
+.contact__box__right {
+    flex: 1;
+    height: 20vh;
+}
+
+/* image-track  */
+.image-track {
+    display: none;
+}
+
+@media screen and (max-width: 860px) {
+
+    .palvelut{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        height: 220vh;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .column__left {
+        height: 200vh;
+    }
+
+    
+    
+    /* image-track  */
+
+    .column__right {
+        display: none;
+    }
+
+    .servicePic{
+        display: none;
+    }
+
+    .image-track {
+        display: flex;
+        background: #111;
+        z-index: 11;
+        gap: 4vmin;
+        height: 80vh;
+        left: 50%; transform: translate(0%, 0%);
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        padding-inline-start: 30px;
+        padding-inline-end: 30px;
+    }
+
+    .image-track .sPic{
+        width: 40vmin;
+        height: 56vmin;
+        object-fit: cover;
+        object-position: 100% 50%;
+    }
+
+}
+
+
+.output {
+    color: #fff;
+    background-color: #8c8c8c;
+    margin-top: 300px;
+}
+
+
+/* contact form  */
+
+.formContainer {
+    height: 100vh;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form__heading{
+    margin-left: 100px;
+    margin-right: 50px;
+    flex:1;
+}
+.contact-form {
+    margin-right: 200px;
+    flex:2;
+}
+
+.infoBox {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #818181;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button{
+    padding: 10px;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+}
+input:focus~label,
+input:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.nameInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nameInfo .infoBox {
+    flex-basis: 48%;
 }

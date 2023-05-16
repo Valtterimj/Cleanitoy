@@ -34,8 +34,10 @@
         </nav>
         
         <div class="formContainer">
-            <h1>Odotamme yhteydenottoasi!</h1>
-            <p>Arvioimme tämän lomakkeen perusteella kenkiesi kuntoa. Kerromme mieluusti miten niistä saadaan puhtaat ja mikä tarvittavan palvelun hinta tulee olemaan, sekä sen kuinka nopeasti kenkäsi ovat valmiina.</p>
+            <div class="form__heading">
+                <h1>Odotamme yhteydenottoasi!</h1>
+                <p>Arvioimme tämän lomakkeen perusteella kenkiesi kuntoa. Kerromme mieluusti miten niistä saadaan puhtaat ja mikä tarvittavan palvelun hinta tulee olemaan, sekä sen kuinka nopeasti kenkäsi ovat valmiina.</p>
+            </div>
             <form class="contact-form" action="https://formsubmit.co/dc8d2f5697452051b457ede27d82ff29" method ="post">
                 <!-- Honeypo -->
                 <input type="text" name="_honey" style="display: none;">
@@ -45,8 +47,8 @@
 
                 <input type="hidden" name="_next" value="https://Valtterimj.github.io/Cleanitoy/success.html">
 
-                <div class="info">
-                    <h2 class="infoTitle">Yhteistietosi</h2>
+                <div class="nameInfo">
+                    
                     <div class="infoBox">
                         <label for="firstName" class="form-label">Etunimi</label>
                         <input type="text" class="form-control" name="First&nbsp;Name" id="firstName" required>
@@ -55,6 +57,8 @@
                         <label for="lastName" class="form-label">Sukunimi</label>
                         <input type="text" class="form-control" name="Last&nbsp;Name" id="lastName" required>
                     </div>
+                </div>  
+                <div class="email_phone">
                     <div class="infoBox">
                         <label for="email" class="form-label">Sähköposti</label>
                         <input type="emial" class="form-control" name="Email" id="email" required>
@@ -63,12 +67,14 @@
                         <label for="phone" class="form-label">Puhelin</label>
                         <input type="number" class="form-control" name="Phone" id="phone">
                     </div>
-                    
                 </div>
+                    
+                    
+                
                 <div class="service">
-                    <h2 class="serviceTitle">Kekäsi</h2>
+                    <h2 class="serviceTitle">Lisätiedot kengistäsi</h2>
                     <p class="serviceText">Kerro lisätietoa kengistäsi. Onko kengille tiettyjä toiveita pesun lisäksi (pohjan liimaaminen, nahanpaikkaus, maalaus)? Ilmoita myös kenkäparien määrä.</p>
-                    <input type="message" name = "Message" placeholder="Lisätiedot">
+                    <textarea type="message" name="Message" id="" cols="30" rows="10"></textarea>
                     <p class="imgText">Lisäämällä kuvan autat meitä arvioimaan kenkäsi kuntoa</p>
                     <!-- <input type="image" name="Picture" > -->
                 </div>

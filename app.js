@@ -34,6 +34,7 @@ window.addEventListener("scroll", function(){
     } else {
         element.style.opacity = "0.2";
     }
+
     // Palvelu description fade animation
     const elements = this.document.querySelectorAll(".description");
     elements.forEach(e => {
@@ -48,15 +49,33 @@ window.addEventListener("scroll", function(){
         }
     })
 
-    // ServicePic scroll animation
-    const parallaxPic = document.querySelector('.column__right');
+    // Service text scroll animation
+    const parallaxPic = document.querySelector('.column__left');
     let scrollPosition = window.pageYOffset;
 
     console.log(scrollPosition)
 
     parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .3 + 'px)';
 
+
+   
 });
+
+ //Service image-track parallax animation 
+        const imgTrackPos = document.querySelector('.image-track');
+        const imgTrackSpic = document.querySelectorAll('.sPic');
+        imgTrackPos.addEventListener("scroll", event => {
+            let maxWidth =   imgTrackPos.scrollWidth - window.innerWidth
+            let nextPercent = 100 - imgTrackPos.scrollLeft / maxWidth * 100 
+            imgTrackSpic.forEach(i => {
+                i.animate({
+                    objectPosition: `${nextPercent}% center`
+                }, {duration: 1200, fill: "forwards"});
+            }, {passive: true});
+        
+        });
+
+
 
 
 
