@@ -431,14 +431,14 @@
 }
 
 .description:not(first-child){
-    margin-top: 150px;
+    margin-top: 130px;
 }
 
 
 .description {
     color: #fff;
     transition: opacity 1s ease-in-out;
-    max-width: 700px;
+    max-width: 650px;
 }
 
 .description h3 {
@@ -452,11 +452,11 @@
 
 .contact__box {
     display: flex;
-    height: 20vh;
-    gap: 20px
+    height: 30vh;
+    gap: 30px
 }
 .contact__box__left {
-    flex: 3;
+    flex: 2;
     text-align: left;
 }
 
@@ -465,8 +465,45 @@
 }
 
 .contact__box__right {
+    display: flex;
     flex: 1;
-    height: 20vh;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+.contact__box__right button {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 15px;
+    height: 100px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.contact__box__right a{
+    text-decoration: none;
+}
+
+@media (min-width:860px) and (max-width: 1050px){
+    .description:not(first-child){
+        margin-top: 100px;
+    }
+    
+    
+    .description {
+        color: #fff;
+        transition: opacity 1s ease-in-out;
+        max-width: 650px;
+    }
+    
+    .description h3 {
+        font-size: 3em;
+    }
+    
+    .description p {
+        font-size: 1.3em;
+        margin-top: 15px;
+    }
 }
 
 /* image-track  */
@@ -480,7 +517,7 @@
         flex-direction: column;
         align-items: center;
         padding-top: 100px;
-        height: 220vh;
+        height: 240vh;
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -532,72 +569,132 @@
 
 
 /* contact form  */
-
-.formContainer {
-    height: 100vh;
-    background: #111;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.form__heading{
-    margin-left: 100px;
-    margin-right: 50px;
-    flex:1;
-}
-.contact-form {
-    margin-right: 200px;
-    flex:2;
-}
-
-.infoBox {
-    margin-bottom: 30px;
-    position: relative;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #818181;
-    color: #fff;
-    background: transparent;
-    font-size: 15px;
-}
-
-label{
-    height: 100%;
+.backgoundIMG{
     position: absolute;
-    left: 0;
     top: 0;
-    padding: 10px;
-    color: #fff;
-    cursor: text;
-    transition: 0.2s;
-}
-
-button{
-    padding: 10px;
-    color: #fff;
-    outline: none;
-    background: transparent;
-    border: 1px solid #fff;
+    left: 0;
     width: 100%;
-    cursor: pointer;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
-input:focus~label,
-input:valid~label{
-    top: -35px;
-    font-size: 14px;
+.form__Container{
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+    align-items: center;
 }
 
-.nameInfo {
+.form__inner{
+    padding: 30px;
+
+}
+
+.form__heading{
+    font-weight: normal;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
+}
+
+.name__info{
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
-.nameInfo .infoBox {
-    flex-basis: 48%;
+.email__phone{
+    display: flex;
+    justify-content: space-between;
 }
+
+
+.infoBox, .messageBox {
+    position: relative;
+    margin-bottom: 25px;
+
+}
+
+.input__text, textarea, .input__phone {
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+
+.input__text:focus,
+.input__phone:focus,
+.textarea:focus{
+    outline: 0;
+    border-bottom: 2px solid #fff;
+}
+
+.input__phone:focus ~ .form-label,
+.input__phone:not(:placeholder-shown):not(:focus) ~.form-label{
+    top: -10px;
+    left: 0;
+    font-size: 11px;
+}
+
+.input__text:focus ~ .form-label,
+.input__text:not(:focus):valid ~ .form-label{
+    top: -10px;
+    left: 0;
+    font-size: 11px;
+}
+
+textarea{
+    margin-top: 30px;
+    min-height: 80px;
+    width: 100%;
+    margin-bottom: 10px;;
+}
+
+textarea:focus ~ .message-label,
+textarea:not(:focus):valid ~ .message-label{
+    top: 10px;
+    left: 0;
+    font-size: 11px;
+}
+
+.form-label, .message-label{
+    position: absolute;
+    pointer-events: none;
+    transition: .2s ease all;
+    font-size: 16px;
+    color: #fff;
+    top: 15px;
+    left: 1px;
+     
+}
+.message-label{
+    top: 30px;
+}
+
+.message__image{
+    color: #fff;
+}
+
+.submit__button{
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 16px;
+    background: transparent;
+    color: #fff;
+}
+
+.submit__button:hover{
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+}
+.submit__button:focus{
+    outline: 0;
+}
+
+
