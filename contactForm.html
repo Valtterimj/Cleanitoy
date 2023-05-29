@@ -85,15 +85,23 @@
                         <textarea class="message__text" type="message" name="Message" id="message" cols="30" rows="10" required></textarea>
                         <span for="message" class="message-label">Lisätiedot kengistäsi</span>
                         </div>
-
-                        <p class="imgText">Lisäämällä kuvan autat meitä arvioimaan kenkäsi kuntoa</p>
-                        <!-- <input type="image" name="Picture" > -->
                     </div>
 
+                    <div class="drop__zone">
+                        <div class="drop__zone__text">
+                            <p class="imgText">Lisäämällä kuvan autat meitä arvioimaan kenkiesi kunnon.</p>
+                        </div>
+                        <div class="drop__zone__image" >
+                            <span for="file" class="drop__zone__prompt"><strong>Valitse tiedosto</strong> tai raahaa se tähän</span>
+                            <input type="file" name="file__pic" id="file__pic" class="drop__zone__input" multiple>
+                        </div>
+                    </div>
+                    
                     <button type="submit" name="Submit" class="submit__button">Lähetä</button>
                 </div>
                 
             </form>
         </div>
+        <script src="app.js"> </script>
     </body>
 </html>
