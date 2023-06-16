@@ -1,8 +1,23 @@
+@font-face {
+    font-family: quicksand;
+    src: url(/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'quicksand', sans-serif;
 }
+
+
+
+body {
+    background: #111;
+}
+
+/* Nav Bar  */
+
 
 .navbar {
     background: #131313;
@@ -215,6 +230,7 @@
 }
 
 
+
 /* Hero section CSS*/
 
 
@@ -226,7 +242,6 @@
 }
 
 .showcase {
-    /* position: absolute; */
     right: 0;
     width: 100%;
     min-height: 90vh;
@@ -346,14 +361,9 @@
 }
 
 
-/* .about.in-view .main__content {
-   opacity: 0;
-}
+/* About us section  */
 
-.about.in-view .main__content__text {
-    opacity: 0.5;
 
- } */
 
 .about {
     position: relative;
@@ -377,27 +387,43 @@
 }
 
 .about__text h2 {
-    font-size: 3em;
+    font-size: 4em;
     margin-bottom: 10px;
 }
 
 .about__text h5 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 50px;
 }
 
 .about__text p {
+    font-size: 1.1em;
     width: 80%;
+}
+
+@media screen and (max-width: 860px) {
+    
+.about {
+    text-align: top;
+    grid-template-columns: auto;
+}
+
+.about__text {
+    max-width: 650px;
+    margin-top: 0;
+}
+    
 }
 
 
 /* palvelut section  */
 
+
 .palvelut {
     display: flex;
     padding-top: 50px;
     z-index: 6;
-    height: 240vh;
+    height: 260vh;
     background: #111;
     text-align: center;
     padding-left: 100px;
@@ -484,6 +510,11 @@
     text-decoration: none;
 }
 
+
+
+
+
+
 @media (min-width:860px) and (max-width: 1050px){
     .description:not(first-child){
         margin-top: 100px;
@@ -506,7 +537,12 @@
     }
 }
 
+
+
 /* image-track  */
+
+
+
 .image-track {
     display: none;
 }
@@ -517,7 +553,6 @@
         flex-direction: column;
         align-items: center;
         padding-top: 100px;
-        height: 240vh;
         padding-left: 30px;
         padding-right: 30px;
     }
@@ -526,8 +561,6 @@
         height: 200vh;
     }
 
-    
-    
     /* image-track  */
 
     .column__right {
@@ -543,12 +576,16 @@
         background: #111;
         z-index: 11;
         gap: 4vmin;
-        height: 80vh;
         left: 50%; transform: translate(0%, 0%);
         overflow-x: auto;
         overscroll-behavior-inline: contain;
         padding-inline-start: 30px;
         padding-inline-end: 30px;
+        margin-bottom: 50px;
+    }
+
+    .image-track::-webkit-scrollbar {
+        display: none;
     }
 
     .image-track .sPic{
@@ -556,16 +593,67 @@
         height: 56vmin;
         object-fit: cover;
         object-position: 100% 50%;
+        background: #111;
     }
 
+    
 }
 
+/* business  */
 
-.output {
+.business__box {
+    display: none;
+}
+
+.business__section {
+    display: flex;
     color: #fff;
-    background-color: #8c8c8c;
-    margin-top: 300px;
+    background: #111;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
+
+.business {
+    padding: 50px 80px 30px 80px;
+    max-width: 1000px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.business h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+.business h4 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.business p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+}
+
+.business button {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2em;
+    border-radius: 15px;
+    height: 60px;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+.business a {
+    text-decoration: none;
+}
+
+
 
 
 /* contact form  */
@@ -589,7 +677,7 @@
 }
 
 .form__inner{
-    padding: 30px;
+    padding: 40px;
 
 }
 
@@ -700,7 +788,7 @@ textarea:not(:focus):valid ~ .message-label{
 
 .drop__zone__image{
     flex: 1;
-    display: flex;
+    display: inline-block;
     width: 150px;
     height: 150px;
     padding: 15px;
@@ -714,13 +802,14 @@ textarea:not(:focus):valid ~ .message-label{
     border-radius: 10px;
 }
 
+.drop__zone__image input[type="file"]{
+
+}
+
 .drop__zone__image--over {
     border-style: solid;
 }
 
-.drop__zone__input{
-    opacity: 0;
-}
 
 .drop__zone__thumb{
     width: 100%;
@@ -767,5 +856,7 @@ textarea:not(:focus):valid ~ .message-label{
 .submit__button:focus{
     outline: 0;
 }
+
+
 
 

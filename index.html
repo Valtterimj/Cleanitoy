@@ -18,13 +18,13 @@
                 </div>
                 <ul class="navbar__menu">
                     <li class="navbar__item">
-                        <a href="/" class="navbar__links">Koti</a>
+                        <a href="#aboutUs" class="navbar__links">Meistä</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="/" class="navbar__links">Palvelut</a>
+                        <a href="#services" class="navbar__links">Palvelut</a>
                     </li>
                     <li class="navbar__item">
-                        <a href="/" class="navbar__links">Työmme</a>
+                        <a href="#businesses" class="navbar__links">Yritykset</a>
                     </li>
                     <li class="navbar__btn">
                         <a href="contactForm.html" class="button">Ota yhteyttä</a>
@@ -36,61 +36,75 @@
         <!-- Hero Section-->
             <div class="main__container">
                 <section class="showcase">
-                    <img src="img/landingpage.jpeg" alt="" class="landingPage">
+                    <img src="img/bg.jpeg" alt="" class="landingPage">
 
 
                 <div class="main__content">
                     <div class="main__content__text">
                         <h1>Kenkäpesula</h1>
-                        <h3>Askel kohti puhtaampaa tulevaisuutta</h3>
+                        <h3>Askel puhtaampaan tulevaisuuteen</h3>
                     </div>
-                    <button class="main__btn"><a href="/"></a>kengistäsi puhtaat</button>
+                    <a href="#services"><button class="main__btn">kengistäsi puhtaat</button></a>
                 </div>
                 </section>
 
-                <section class="about"> 
+                <section class="about" id="aboutUs"> 
                     <div class="about__text">
                         <h2>Meistä</h2>
                         <h5>Suomalainen opiskelijoiden perustama kenkäpesula</h5>
                         <p>Hyväkuntoiset ja "cleanit" kengät jalassa käveleminen on meille tärkeää, ja niin sen pitäisi olla aina mahdollista. Nyky maailmassa kiertotalouden huomioiminen on entistä tärkeämpää. Me uskomme jokaisen teon merkitsevän ja siksi tarjoamme helpon tavan edistää kestävää kehitystä puhtain askelin eteenpäin.</p>
                     </div>
                 </section>
-                <section class="palvelut">
+
+
+                <section class="palvelut" id="services">
 
                         <div class="column__left">
 
                             <div class="description">
-                                <h3>Pesu</h3>
+                                <h3>Pinta Pesu</h3>
                                 <p>
-                                    Huolellinen ulko- ja sisäpintojen käsinpesu takaa puhtaan jäljen
+                                    Ulkoisen lian putsaaminen ja pinnan suojaaminen lialta ja roiskeelta.
                                 </p>
+                                <p class="price"> 25 €</p>
+                            </div>
+
+                            <div class="description">
+                                <h3>Huolellinen Pesu</h3>
+                                <p>
+                                    Huolellinen ulko- ja sisäpintojen käsinpesu, ulkopinnan suojaaminen lialta ja roiskeelta, 
+                                    bakteereja tappava ja raikasta tuoksua tuova suihke kengän sisälle, sekä kengän ryppyjen suoristus.
+                                </p>
+                                <p class="price"> 30 €</p>
                             </div>
 
                             <div class="description">
                                 <h3>Valkaisu</h3>
                                 <p>
-                                    Oikeat aineet ja tehokas ultaviolettivalo valkaisevat kellertävät pohjat uuden kirkkaiksi
+                                    Oikeat aineet ja tehokas ultaviolettivalo valkaisevat kellertävät pohjat uuden kirkkaiksi.
                                 </p>
-                            </div>
-
-                            <div class="description">
-                                <h3>Suojaus</h3>
-                                <p> Me emme jätä kenkiä vain puhtaan näköisiksi. Kengät suihkutetaan sisältä bakteereja tuhoavalla ja ulkoa pintaa suojaavilla aineilla</p>
+                                <p class="price"> 5 €</p>
                             </div>
 
                             <div class="description">
                                 <h3>Liimaus ja paikkaus</h3>
-                                <p>Pidennämme kenkien elinkaarta liimaamalla irronneen pohjan takaisin ja paikkaamme nahkasta naarmut sekä kuluman jäljet</p>
+                                <p>Pidennämme kenkien elinkaarta liimaamalla irronneen pohjan takaisin ja
+                                     paikkaamme nahkasta naarmut sekä kuluman jäljet.</p>
+                                <p class="price"> 5 - 10 €</p>
                             </div>
 
                             <div class="description">
                                 <h3>Uudelleen maalaus</h3>
-                                <p>Parhaat kengille suunnatut nahkamaalit ja huolella tehdyt sävytykset antavat kengille taas aivan uudenveroisen ilmeen</p>
+                                <p>Parhaat kengille suunnatut nahkamaalit ja huolella tehdyt sävytykset antavat kengille taas aivan uudenveroisen ilmeen.</p>
+                                <p class="price"> 10 - 15 €</p>
                             </div>
 
                             <div class="description">
                                 <h3>Kustomoinnit</h3>
-                                <p>Onko sinulla jokin uniikki toive tai olemassa oleva color wave mikä sopisi kenkiisi? Kenties kenkäsi kaipaavat uutta näköä, mutta et ole varma mitkä värit siihen sopisivat parhaiten? Ota yhteyttä meihin niin tehdään yhdessä kengistäsi juuri sinun näköiset!</p>
+                                <p>Onko sinulla jokin uniikki toive tai olemassa oleva color wave mikä sopisi kenkiisi? 
+                                    Kenties kenkäsi kaipaavat uutta näköä, mutta et ole varma mitkä värit siihen sopisivat parhaiten? 
+                                    Ota yhteyttä meihin niin tehdään yhdessä kengistäsi juuri sinun näköiset!</p>
+                                <p class="price"> 15 - 20 €</p>
                             </div>
 
                             <div class="contact__box description">
@@ -105,8 +119,6 @@
                                 
                                 </div>
                             </div>
-
-                        
                             
                         </div>
 
@@ -124,12 +136,28 @@
                         <img src="img/kustomointit.jpeg" alt="" class="sPic" draggable="false">
                         <img src="img/pesu.JPEG" alt="" class="sPic" draggable="false">
                         <img src="img/image-track-af1.JPG" alt="" class="sPic" draggable="false">
-                        <img src="img/image-track-icing.JPG" alt="" class="sPic" draggable="false">
+                        <img src="img/Icing_imgTrack.jpeg" alt="" class="sPic" draggable="false">
                         <img src="img/image-track-retro-9.jpeg" alt="" class="sPic" draggable="false">
                         <img src="img/image-track-last.JPG" alt="" class="sPic" draggable="false">
                         
                     </div>
-
+                <section class="business__section" id="businesses">
+                    <div class="business">
+                        <h2>Isompi satsi kenkiä?</h2>
+                        <h4>Työkenkien pesu ja entisöinti on nykyajan vastuullista toimintaa!</h4>
+                        <p>
+                            Huolellinen sisä- ja ulkopintojen pesu, sekä bakteereja tappava suihke mahdollistaa
+                            työ- ja turvakenkien kierrättämisen. Täysin uudenveroisen ilmeen saa vaihtamalla myös pohjalliset ja nauhat.
+                        </p>
+                        <p>
+                            Kenkien elinkaaren pidentäminen vähentää uusien kenkien tarvetta samalla kannustaen laadukkaiden kenkien käyttöön. 
+                            Yhteistyö meidän kanssa on vastuullinen tapa edistää kiertotaloutta ja kestätävää kehitystä.  
+                        </p>
+                        <a href="contactForm.html">
+                            <button class="button">Pyydä tarjous</button>
+                        </a>
+                    </div>
+                </section>
                     
             </div>
 

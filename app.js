@@ -91,7 +91,7 @@ window.addEventListener("scroll", function(){
                 }
             });
 
-            
+
             dropZoneElement.addEventListener("dragover", e => {
                 e.preventDefault();
                 dropZoneElement.classList.add("drop__zone__image--over");
