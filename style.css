@@ -264,16 +264,6 @@ body {
     opacity: 0.8;
 }
 
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
-
 .main__content {
     position: absolute;
     left: 50px;
@@ -516,10 +506,10 @@ body {
 
 
 @media (min-width:860px) and (max-width: 1050px){
+
     .description:not(first-child){
         margin-top: 100px;
     }
-    
     
     .description {
         color: #fff;
@@ -552,9 +542,10 @@ body {
     .palvelut{
         flex-direction: column;
         align-items: center;
-        padding-top: 100px;
+        padding-top: 50px;
         padding-left: 30px;
         padding-right: 30px;
+        height: 270vh;
     }
 
     .column__left {
@@ -572,6 +563,8 @@ body {
     }
 
     .image-track {
+        text-align: center;
+        align-items: center;
         display: flex;
         background: #111;
         z-index: 11;
@@ -581,7 +574,8 @@ body {
         overscroll-behavior-inline: contain;
         padding-inline-start: 30px;
         padding-inline-end: 30px;
-        margin-bottom: 50px;
+        padding-bottom: 50px;
+
     }
 
     .image-track::-webkit-scrollbar {
@@ -654,6 +648,43 @@ body {
 }
 
 
+/* some  */
+
+.some {
+    height: 35vh;
+    background: #111;
+}
+
+.some-container{
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 75px;
+    padding-right: 75px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.some-text{
+    margin-bottom: 50px;
+}
+
+.some-icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.fa-brands{
+    color: #fff;
+    z-index: 15;
+    font-size: 130px;
+}
+
 
 
 /* contact form  */
@@ -662,18 +693,19 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120vh;
+    height: 130vh;
     object-fit: cover;
-    z-index: -1;
+    z-index: -10;
 }
 .form__Container{
     margin: 0 auto;
     max-width: 600px;
     width: 100%;
-    height: 105vh;
+    height: 120vh;
     box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: -5;
 }
 
 .form__inner{
@@ -788,7 +820,6 @@ textarea:not(:focus):valid ~ .message-label{
 
 .drop__zone__image{
     flex: 1;
-    display: inline-block;
     width: 150px;
     height: 150px;
     padding: 15px;
@@ -797,44 +828,70 @@ textarea:not(:focus):valid ~ .message-label{
     text-align: center;
     font-weight: 500;
     font-size: 18px;
+    border-radius: 10px;
+    z-index: 5;
+}
+/* 
+
+.drop__zone__input::before{
+    content: 'Valitse tiedosto';
+    display: inline-block;
+    background: linear-gradient(top, #818181,#fff);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 5px, 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
     cursor: pointer;
-    border: 2px dashed #fff;
-    border-radius: 10px;
-}
-
-.drop__zone__image input[type="file"]{
-
-}
-
-.drop__zone__image--over {
-    border-style: solid;
-}
-
-
-.drop__zone__thumb{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    background: transparent;
-    background-size: cover;
-    position: relative;
-
-}
-
-.drop__zone__thumb::after {
-    content: attr(data-label);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 0;
-    color: #fff;
-    background-color: rgba(0,0,0,0.75);
-    font-size: 14px;
+    text-shadow: 1px 1px #111;
+    font-weight: 700;
+    font-size: 15pt;
+    width: 200px;
+    height: 70px;
     text-align: center;
+    padding-top: 40px;
 }
 
+.drop__zone__input:hover::before {
+    border-color: #111;
+}
+ */
+.drop__zone__input{
+    width: 200px;
+    max-width: 100%;
+    height: 100px;
+    color: #fff;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 2px #fff dashed;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.drop__zone__input:hover{
+    border: 2px #fff solid;
+}
+
+.drop__zone__input::-webkit-file-upload-button{
+    color: #fff;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background:none;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
+
+.drop__zone__prompt{
+   display: none;
+}
 
 /* submit Button  */
 
@@ -858,5 +915,37 @@ textarea:not(:focus):valid ~ .message-label{
 }
 
 
+/* success page  */
 
+.thankyou__container{
+    height: 35vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding-top: 50px;
+}
 
+.thankyou__container h1, p {
+    margin-bottom: 25px;
+}
+
+.return__button {
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 100px;
+    padding: 10px 20px;
+    height: 100px;
+    width: 400px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: #818181;
+    color: #fff;
+}
+
+.return__button:hover {
+    background-image: linear-gradient(to top, #818181 0%,#e3dcdc 100%);
+    transition: all 0.3s ease;
+}

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a12959bd36.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="style.css">
         <title>ContactForm</title>
     </head>
@@ -18,7 +19,7 @@
                 </div>
                 <ul class="navbar__menu">
                     <li class="navbar__item">
-                        <a href="/" class="navbar__links">Koti</a>
+                        <a href="/" class="navbar__links">Meistä</a>
                     </li>
                     <li class="navbar__item">
                         <a href="/" class="navbar__links">Palvelut</a>
@@ -35,14 +36,14 @@
             <img class="backgoundIMG" src="/img/contactForm__background.jpeg" alt="">
 
         <div class="form__Container">
-            <form class="contact-form" action="https://formsubmit.co/dc8d2f5697452051b457ede27d82ff29" method ="post">
+            <form class="contact-form" action="https://formsubmit.co/dc8d2f5697452051b457ede27d82ff29" method ="post" enctype="multipart/form-data">
                 <!-- Honeypo -->
                 <input type="text" name="_honey" style="display: none;">
 
                 <!-- Disaple Captcha  -->
                 <input type="hidden" name="_captcha" value="false">
 
-                <input type="hidden" name="_next" value="https://Valtterimj.github.io/Cleanitoy/success.html">
+                <input type="hidden" name="_next" value="success.html">
                 
                 <div class="form__heading">
                     <h1>Odotamme yhteydenottoasi!</h1>
@@ -93,8 +94,8 @@
                         </div>
 
                         <div class="drop__zone__image" >
-                            <input type="file" name="file__pic" id="file__pic" class="drop__zone__input" multiple>
-                            <span for="file" class="drop__zone__prompt"><strong>Valitse tiedosto</strong> tai raahaa se tähän</span>  
+                            <input type="file" name="file__pic" id="file__pic" class="drop__zone__input" accept="image/png, image/jpg" multiple>
+                            <label for="file__pic" class="drop__zone__prompt"><strong>Valitse tiedosto</strong> tai raahaa se tähän</label>  
                         </div>
                     </div>
                     
@@ -103,6 +104,20 @@
                 
             </form>
         </div>
+        <section class="some">
+            <div class="some-container">
+                <div class="some-text">
+                    <h1>Lisää tietoa meistä ja työstämme löydät meidän some tileiltämme</h1>
+                </div>
+                <div class="some-icons">
+                    <a href="https://www.instagram.com/cleanitoy/" target="_blank"> <i class="fa-brands fa-instagram" ></i></a>
+                    <a href="https://www.tiktok.com/@cleanitoy" target="_blank"> <i class="fa-brands fa-tiktok" ></i></a>
+
+                </div>
+            </div>
+            
+        </section>
+            
         <script src="app.js"> </script>
     </body>
 </html>

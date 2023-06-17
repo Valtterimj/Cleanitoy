@@ -76,92 +76,18 @@ window.addEventListener("scroll", function(){
         });
 
 //contact form dropZone
-        document.querySelectorAll(".drop__zone__input").forEach(inputElement => {
-            const dropZoneElement = inputElement.closest(".drop__zone__image");
-
-
-
-            dropZoneElement.addEventListener("click", e => {
-                inputElement.click();
-            })
-        
-            inputElement.addEventListener("change", e => {
-                if (inputElement.files.lenght){
-                    updateThumbnail(dropZoneElement, inputElement.files[0]);
-                }
+        const dropZoneInput = document.querySelector('.drop__zone__input')
+        var uploaded_image = "";
+        dropZoneInput.addEventListener("change", event=>{
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+                uploaded_image = reader.result;
+                document.querySelector(".drop__zone__image").style.backgroundImage = url($(uploaded_image));
             });
-
-
-            dropZoneElement.addEventListener("dragover", e => {
-                e.preventDefault();
-                dropZoneElement.classList.add("drop__zone__image--over");
-            });
-
-            ["dragleave", "dragend"].forEach(type => {
-                dropZoneElement.addEventListener(type, e => {
-                    dropZoneElement.classList.remove("drop__zone__image--over");
-                });               
-            });
-
-            dropZoneElement.addEventListener("drop", e => {
-                e.preventDefault();
-
-                if (e.dataTransfer.files.lenght) {
-                    inputElement.files = e.dataTransfer.files;
-                    updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-                }
-
-                dropZoneElement.classList.remove("drop__zone__image--over");
-            });
-        
+            reader.readAsDataURL(this.files[0]);
+            dropZoneInput.style.opacity = 100 ;
+            document.querySelector(".drop__zone_prompt").style.opacity = 0;
         });
-
-
-
-            
-
-            
-        /**
-         * Updates the thumbnail on a drop zone element
-         * 
-         *  @param {HTMLElement} dropZoneElement
-         *  @param {File} file
-         * 
-         */
-            
-
-
-        function updateThumbnail(dropZoneElement, file) {
-            let thumbnailElement = dropZoneElement.querySelector(".drop__zone__image__thumb");
-
-            //First time - remove the prompt
-            if (dropZoneElement.querySelector(".drop__zone__prompt")) {
-                dropZoneElement.querySelector(".drop__zone__prompt").remove();
-            }
-
-            //First time - there is no thumbnail element, so lets create it
-            if (!thumbnailElement) {
-                thumbnailElement = document.createElement("div");
-                thumbnailElement.classList.add("drop__zone__image__thumb");
-                dropZoneElement.appendChild(thumbnailElement);
-            }
-
-            thumbnailElement.dataset.label = file.name;
-
-            //show thumbnail for image files
-            if (file.type.startsWith("image/")) {
-                const reader = new FileReader();
-
-                reader.readAsDataURL(file);
-                reader.onload = () => {
-                    thumbnailElement.style.backgroundImage = `url('${ reader.result } ')`;
-                };
-
-            } else {
-                thumbnailElement.style.backgroundImage = null;
-            }
-        }
-
 
        
 
