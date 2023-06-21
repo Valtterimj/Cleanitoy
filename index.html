@@ -11,7 +11,7 @@
     <body>
         <nav class="navbar">
             <div class="navbar__container">
-                <a href="/" id="navbar__logo"><img src="img/Cleanit_logo_bg.png" class="img__navbar" alt=""> Cleanit</a>
+                <a href="/" id="navbar__logo"><img src="img/Cleanit_logo_bg.png" class="img__navbar" alt="" draggable="false"> Cleanit</a>
                 <div class="navbar__toggle" id="mobile-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -28,7 +28,7 @@
                         <a href="#businesses" class="navbar__links">Yritykset</a>
                     </li>
                     <li class="navbar__btn">
-                        <a href="contactForm.html" class="button">Ota yhteyttä</a>
+                        <a href="#form--section" class="button">Ota yhteyttä</a>
                     </li>
                 </ul>
             </div>       
@@ -37,7 +37,7 @@
         <!-- Hero Section-->
             <div class="main__container">
                 <section class="showcase">
-                    <img src="img/bg.jpeg" alt="" class="landingPage">
+                    <img src="img/bg.jpeg" alt="" class="landingPage" draggable="false">
 
 
                 <div class="main__content">
@@ -49,11 +49,23 @@
                 </div>
                 </section>
 
+                <!-- about us section  -->
+
                 <section class="about" id="aboutUs"> 
-                    <div class="about__text">
+                    <div class="about__text about-left">
+                        <h2>Puhtailla kengillä ja pienemmällä hiilijalanjäljellä</h2>
+                        <h3>Pidennä lempi kenkiesi elinkaarta, suojele ympäristöä, säästä rahaa ja kävele tyylikkäillä kengillä. </h3>
+                        <p>Kiertotalouden huomioiminen on entistä tärkeämpää. Me <span id="dots">...</span>
+                            <span id="more">uskomme jokaisen teon merkitsevän ja siksi tarjoamme helpon tavan edistää kestävää kehitystä puhtain askelin eteenpäin.
+                            Kengät kunnostamalla pystymme vähentämään valtavaa roskiin ajautuvien kenkien määrää ja tarvetta uusien kenkien hankkimiseen.</span></p>
+                        <button onclick="readMore()" id="myBtn" class="readBtn">Lue lisää</button>
+                    </div>
+                    <div class="about__text about-right">
                         <h2>Meistä</h2>
-                        <h5>Suomalainen opiskelijoiden perustama kenkäpesula</h5>
-                        <p>Hyväkuntoiset ja "cleanit" kengät jalassa käveleminen on meille tärkeää, ja niin sen pitäisi olla aina mahdollista. Nyky maailmassa kiertotalouden huomioiminen on entistä tärkeämpää. Me uskomme jokaisen teon merkitsevän ja siksi tarjoamme helpon tavan edistää kestävää kehitystä puhtain askelin eteenpäin.</p>
+                        <h3>Suomalainen opiskelijoiden perustama kenkäpesula</h3>
+                        <p>Hyväkuntoiset ja "cleanit" kengät jalassa käveleminen on meille tärkeää. Aloitimme <span id="us-dots">...</span><span id="us-more">omien kenkien pesun ja kunnostuksen, kun vastaavaa palvelua ei löytynyt. 
+                            Nyt haluamme tuoda jokaiselle mahdollisuuden ylläpitää kenkien ehjää ja puhdasta kuntoa. </span></p>
+                        <button onclick="readMoreUs()" id="usBtn" class="readBtn">Lue lisää</button>
                     </div>
                 </section>
 
@@ -61,6 +73,10 @@
                 <section class="palvelut" id="services">
 
                         <div class="column__left">
+
+                            <div class="descriptionPic">
+                                <img src="img/dirtyRoyal_wbg.PNG" alt="" class="mobileServicePic" draggable="false">
+                            </div>
 
                             <div class="description">
                                 <h3>Pinta Pesu</h3>
@@ -79,12 +95,18 @@
                                 <p class="price"> 30 €</p>
                             </div>
 
+                           
+
                             <div class="description">
                                 <h3>Valkaisu</h3>
                                 <p>
                                     Oikeat aineet ja tehokas ultaviolettivalo valkaisevat kellertävät pohjat uuden kirkkaiksi.
                                 </p>
                                 <p class="price"> 5 €</p>
+                            </div>
+
+                             <div class="descriptionPic">
+                                <img src="img/dirtyRoyal_wbg.PNG" alt="" class="mobileServicePic" draggable="false">
                             </div>
 
                             <div class="description">
@@ -94,10 +116,18 @@
                                 <p class="price"> 5 - 10 €</p>
                             </div>
 
+                            <div class="descriptionPic">
+                                <img src="img/dirtyRoyal_wbg.PNG" alt="" class="mobileServicePic" draggable="false">
+                            </div>
+
                             <div class="description">
                                 <h3>Uudelleen maalaus</h3>
                                 <p>Parhaat kengille suunnatut nahkamaalit ja huolella tehdyt sävytykset antavat kengille taas aivan uudenveroisen ilmeen.</p>
                                 <p class="price"> 10 - 15 €</p>
+                            </div>
+
+                            <div class="descriptionPic">
+                                <img src="img/dirtyRoyal_wbg.PNG" alt="" class="mobileServicePic" draggable="false">
                             </div>
 
                             <div class="description">
@@ -108,26 +138,14 @@
                                 <p class="price"> 15 - 20 €</p>
                             </div>
 
-                            <div class="contact__box description">
-                                <div class="contact__box__left">
-                                    <h3>Lähetä meille kuva kengistäsi!</h3>
-                                    <p>Kerromme miten kengistäsi tulee puhtaat ja kuinka nopeasti ne ovat valmiit meidän palvelumme kautta.</p>
-                                </div>
-                                <div class="contact__box__right">
-                                    <a href="contactForm.html">
-                                        <button class="button">Ota yhteyttä</button>
-                                    </a>
-                                
-                                </div>
-                            </div>
                             
                         </div>
 
                      <div class="column__right">
-                            <img src="img/pesu.JPEG" alt="" class="servicePic" draggable="false">
-                            <img src="img/valkasu.jpeg" alt="" class="servicePic" draggable="false">
-                            <img src="img/uudelleenmaalaus.jpeg" alt="" class="servicePic" draggable="false">
-                            <img src="img/kustomointit.jpeg" alt="" class="servicePic" draggable="false">
+                            <img src="img/dirtyRoyal_wbg.PNG" alt="" class="servicePic" draggable="false">
+                            <img src="img/dirtyRoyal_wbg.PNG" alt="" class="servicePic" draggable="false">
+                            <img src="img/dirtyRoyal_wbg.PNG" alt="" class="servicePic" draggable="false">
+                            <img src="img/dirtyRoyal_wbg.PNG" alt="" class="servicePic" draggable="false">
                         </div>
                         
                 </section>
@@ -142,6 +160,76 @@
                         <img src="img/image-track-last.JPG" alt="" class="sPic" draggable="false">
                         
                     </div>
+                <section class="form--section" id="form--section">
+                    <div class="form--container">
+                        <form class="contact-form" action="https://formsubmit.co/dc8d2f5697452051b457ede27d82ff29" method ="post" enctype="multipart/form-data">
+                            <!-- Honeypo -->
+                            <input type="text" name="_honey" style="display: none;">
+                
+                            <!-- Disaple Captcha  -->
+                            <input type="hidden" name="_captcha" value="false">
+                
+                            <input type="hidden" name="_next" value="/">
+                                
+                            <div class="form--heading">
+                                <h2>Odotamme yhteydenottoasi!</h2>
+                                <p>Lähetä kuva meille kengistäsi, niin arvioimme niiden kunnon ja kerromme miten niistä saadaan puhtaat.</p>
+                            </div>
+                
+                            <div class="form--inner">
+                
+                                <!-- first and lastname  -->
+                                <div class="name--info"> 
+                                    <div class="info--box">
+                                        <input type="text" class="input--text" name="First&nbsp;Name" id="firstName" required>
+                                        <span for="firstName" class="form-label">Etunimi</span>
+                                    </div>
+                
+                                    <div class="info--box">
+                                        <input type="text" class="input--text" name="Last&nbsp;Name" id="lastName" required>
+                                        <span for="lastName" class="form-label">Sukunimi</span>
+                                    </div>
+                
+                                </div>  
+                
+                                <!-- email and phone number  -->
+                                <div class="email--phone">
+                                    <div class="info--box">
+                                        <input type="emial" class="input--text email" name="Email" id="email" required>
+                                        <span for="email" class="form-label">Sähköposti</span>
+                                    </div>
+                                    <div class="info--box">
+                                        <input type="number" placeholder=" " class="input--phone phone" name="Phone" id="phone">
+                                        <span for="phone" class="form-label">Puhelin</span>
+                                    </div>
+                                </div>
+                                    
+                                    
+                                <!-- message -->
+                                <div class="message--image">
+                                    <p class="serviceText">Kerro lisätietoa kengistäsi. Tuleeko kengillesi pika- vai huolellinen pesu? Onko kengille toiveita pesun lisäksi (pohjan liimaaminen, nahanpaikkaus, maalaus)? Ilmoita myös kenkäparien määrä ja tarvittaessa erittele niille tulevat palvelut.</p>
+                                    <div class="message--box">
+                                        <textarea class="message--text" type="message" name="Message" id="message" cols="30" rows="10" required></textarea>
+                                        <span for="message" class="message-label">Lisätiedot kengistäsi</span>
+                                    </div>
+                                </div>
+                
+                                <div class="drop--zone">
+                                    <div class="drop--zone--text">
+                                        <p class="imgText">Lisää kuva kengistäsi</p>
+                                    </div>
+                
+                                    <div class="drop--zone--image" >
+                                        <input type="file" name="file__pic" id="file__pic" class="drop--zone--input" accept="image/png, image/jpg" multiple>
+                                        <label for="file__pic" class="drop--zone--prompt"><strong>Valitse tiedosto</strong> tai raahaa se tähän</label>  
+                                    </div>
+                                </div>
+                                    
+                                <button type="submit" name="Submit" class="submit--button">Lähetä</button>
+                            </div>      
+                        </form>
+                    </div>
+                </section>
                 <section class="business__section" id="businesses">
                     <div class="business">
                         <h2>Isompi satsi kenkiä?</h2>
@@ -154,7 +242,7 @@
                             Kenkien elinkaaren pidentäminen vähentää uusien kenkien tarvetta samalla kannustaen laadukkaiden kenkien käyttöön. 
                             Yhteistyö meidän kanssa on vastuullinen tapa edistää kiertotaloutta ja kestätävää kehitystä.  
                         </p>
-                        <a href="contactForm.html">
+                        <a href="#form--section">
                             <button class="button">Pyydä tarjous</button>
                         </a>
                     </div>

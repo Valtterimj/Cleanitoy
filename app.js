@@ -23,17 +23,54 @@ const titleObserver = new IntersectionObserver(
 
 titleObserver.observe(firstSection);
 
+
+//about us read more
+function readMore() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Lue lisää"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "vähemmän"; 
+      moreText.style.display = "inline";
+    }
+}
+
+function readMoreUs() {
+    var dots = document.getElementById("us-dots");
+    var moreText = document.getElementById("us-more");
+    var btnText = document.getElementById("usBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Lue lisää"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "vähemmän"; 
+      moreText.style.display = "inline";
+    }
+}
+
 //about us text fade animation
 window.addEventListener("scroll", function(){
-    const element = document.querySelector(".about__text");
-    const position = element.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+    const aboutElements = document.querySelectorAll(".about__text");
+    aboutElements.forEach(e => {
+        const position = e.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-    if (position.top < windowHeight * 0.7) {
-        element.style.opacity = "1";
-    } else {
-        element.style.opacity = "0.2";
-    }
+        if (position.top < windowHeight * 0.7) {
+            e.style.opacity = "1";
+        } else {
+            e.style.opacity = "0.2";
+        }
+    })
+    
 
     // Palvelu description fade animation
     const elements = this.document.querySelectorAll(".description");
@@ -55,7 +92,7 @@ window.addEventListener("scroll", function(){
 
     console.log(scrollPosition)
 
-    parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .3 + 'px)';
+    parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .5 + 'px)';
 
 
    
@@ -73,20 +110,6 @@ window.addEventListener("scroll", function(){
                 }, {duration: 1200, fill: "forwards"});
             }, {passive: true});
         
-        });
-
-//contact form dropZone
-        const dropZoneInput = document.querySelector('.drop__zone__input')
-        var uploaded_image = "";
-        dropZoneInput.addEventListener("change", event=>{
-            const reader = new FileReader();
-            reader.addEventListener("load", () => {
-                uploaded_image = reader.result;
-                document.querySelector(".drop__zone__image").style.backgroundImage = url($(uploaded_image));
-            });
-            reader.readAsDataURL(this.files[0]);
-            dropZoneInput.style.opacity = 100 ;
-            document.querySelector(".drop__zone_prompt").style.opacity = 0;
         });
 
        
