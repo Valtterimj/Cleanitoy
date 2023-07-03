@@ -111,6 +111,17 @@ window.addEventListener("scroll", function(){
             }, {passive: true});
         
         });
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            var images = document.querySelectorAll('.image-track img');
+            
+            for (var i = 0; i < images.length; i++) {
+              images[i].addEventListener('contextmenu', function(e) {
+                e.preventDefault(); // Prevents the default right-click menu
+              });
+            }
+          });
+          
 
        
 

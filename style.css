@@ -14,6 +14,8 @@
 
 body {
     background: #111;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Nav Bar  */
@@ -21,7 +23,7 @@ body {
 
 .navbar {
     background: #131313;
-    height: 80px;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,6 +131,7 @@ body {
     width: 100%;
 }
 
+/* social meadia navbar  */
 @media screen and (max-width: 960px) {
     .navbar__container {
         display: flex;
@@ -244,14 +247,17 @@ body {
 .showcase {
     right: 0;
     width: 100%;
-    min-height: 90vh;
-    padding: 100px;
+    height: 90vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #111;
     color: #fff;
     z-index: 1;
+}
+
+.landingPageContainer{
+    pointer-events: none;
 }
 
 .landingPage {
@@ -261,7 +267,8 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.8;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .main__content {
@@ -279,6 +286,8 @@ body {
     z-index: 2;
     transition: opacity 0.5s ease-in-out;
 }
+
+
 
 .main__content h1 {
     font-size: 5em;
@@ -350,6 +359,16 @@ body {
     
 }
 
+@media screen and (max-width: 500px) {
+    .main__content {
+        left: 25px;
+    }
+    .main__content.show{
+        left: 25px;
+    }
+}
+
+
 
 /* About us section  */
 
@@ -368,7 +387,6 @@ body {
     color: #fff;
     z-index: 5;
     overflow: hidden;
-    top: -10px;
 }
 
 
@@ -459,7 +477,7 @@ body {
     padding-left: 120px;
     padding-right: 120px;
     gap:5vmin;
-    /* margin-top: 50px; */
+    pointer-events: none;
 }
 
 .column__right{
@@ -469,6 +487,8 @@ body {
 
 .servicePic{
    width: 250px;
+   user-select: none;
+    -webkit-touch-callout: none;
 }
 .servicePic:first-child {
     margin-top: 50px;
@@ -480,6 +500,12 @@ body {
 .discriptionPic, .mobileServicePic{
     display: none;
 }
+
+.mobileServicePic{
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
 
 
 /* text and descriptions  */
@@ -590,6 +616,8 @@ body {
         object-fit: cover;
         object-position: 100% 50%;
         background: #111;
+        user-select: none;
+        -webkit-touch-callout: none;
     }
 
     
@@ -626,6 +654,8 @@ body {
     object-fit: cover;
     object-position: 100% 50%;
     background: #111;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 
