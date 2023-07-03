@@ -32,11 +32,11 @@ function readMore() {
   
     if (dots.style.display === "none") {
       dots.style.display = "inline";
-      btnText.innerHTML = "Lue lisää"; 
+      btnText.innerHTML = "Enemmän"; 
       moreText.style.display = "none";
     } else {
       dots.style.display = "none";
-      btnText.innerHTML = "vähemmän"; 
+      btnText.innerHTML = "Vähemmän"; 
       moreText.style.display = "inline";
     }
 }
@@ -48,11 +48,11 @@ function readMoreUs() {
   
     if (dots.style.display === "none") {
       dots.style.display = "inline";
-      btnText.innerHTML = "Lue lisää"; 
+      btnText.innerHTML = "Enemmän"; 
       moreText.style.display = "none";
     } else {
       dots.style.display = "none";
-      btnText.innerHTML = "vähemmän"; 
+      btnText.innerHTML = "Vähemmän"; 
       moreText.style.display = "inline";
     }
 }
