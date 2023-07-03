@@ -541,6 +541,43 @@ body {
 
 
 
+/* image track  */
+
+.image-track {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    background: #111;
+    z-index: 11;
+    gap: 4vmin;
+    left: 50%; transform: translate(0%, 0%);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+    padding-bottom: 75px;
+}
+
+.image-track::-webkit-scrollbar {
+    display: none;
+}
+
+.image-track .sPic{
+    width: 270px;
+    height: 350px;
+    object-fit: cover;
+    object-position: 100% 50%;
+    background: #111;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 960px) {
 
     .palvelut{
@@ -611,8 +648,6 @@ body {
     }
 
     .image-track .sPic{
-        width: 40vmin;
-        height: 56vmin;
         object-fit: cover;
         object-position: 100% 50%;
         background: #111;
@@ -625,39 +660,16 @@ body {
 
 
 
+@media screen and (max-width: 500px){
+    .column__left{
+        margin-top: 55px;
+    }
 
-
-/* image track  */
-
-.image-track {
-    text-align: center;
-    align-items: center;
-    display: flex;
-    background: #111;
-    z-index: 11;
-    gap: 4vmin;
-    left: 50%; transform: translate(0%, 0%);
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    padding-inline-start: 30px;
-    padding-inline-end: 30px;
-    padding-bottom: 75px;
+    .image-track .sPic{
+        width: 220px;
+        height: 300px;
+    }
 }
-
-.image-track::-webkit-scrollbar {
-    display: none;
-}
-
-.image-track .sPic{
-    width: 40vmin;
-    height: 56vmin;
-    object-fit: cover;
-    object-position: 100% 50%;
-    background: #111;
-    user-select: none;
-    -webkit-touch-callout: none;
-}
-
 
 
 

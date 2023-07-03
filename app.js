@@ -92,7 +92,7 @@ window.addEventListener("scroll", function(){
 
     console.log(scrollPosition)
 
-    parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .5 + 'px)';
+    parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .4 + 'px)';
 
 
    
