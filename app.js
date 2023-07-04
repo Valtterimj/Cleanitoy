@@ -93,12 +93,10 @@ window.addEventListener("scroll", function(){
     elements.forEach(e => {
         const position = e.getBoundingClientRect();
         const windowHeight = this.window.innerHeight;
-        if (position.top > windowHeight * 0.8) {
-            e.style.opacity = "0.2";
-        } else if (position.top <= windowHeight * 0.15) {
-             e.style.opacity = "0.5";
-        } else {
+        if (position.top < windowHeight * 0.7) {
             e.style.opacity = "1";
+        } else {
+            e.style.opacity = "0.2";
         }
     })
 
