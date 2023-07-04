@@ -6,22 +6,38 @@ menu.addEventListener('click', function() {
     menuLinks.classList.toggle('active');
 });
 
-//animation for title to stick to screen until the next section comes enough to the screen.
-const firstSection = document.querySelector('.showcase')
+
+// title scrolling animation 
+
 const mainContent = document.querySelector('.main__content');
+const mainContentText = document.querySelector('.main__content__text');
+const btnHolder = document.querySelector('.button__holder');
+const aboutSection = document.querySelector('.about');
 
-const titleObserver = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            mainContent.classList.toggle("show", entry.isIntersecting)
-        })
-    },
-    {
-        threshold: 0.90,
+const mainContentRect = mainContent.getBoundingClientRect();
+const mainContentTextRect = mainContentText.getBoundingClientRect();
+const aboutSectionRect = aboutSection.getBoundingClientRect();
+
+
+const lockInPoint = aboutSectionRect.top - mainContentTextRect.bottom;
+
+
+window.addEventListener('scroll', function() {
+
+    if (window.pageYOffset >= lockInPoint) {
+        mainContentText.style.bottom = window.pageYOffset + 'px';
+        mainContentText.style.opacity = '0.5';
+        btnHolder.classList.add("btnNone");
+    } else {
+        mainContentText.style.bottom = '100px';
+        mainContentText.style.opacity = '1';
+        btnHolder.classList.remove("btnNone");
     }
-)
+});
 
-titleObserver.observe(firstSection);
+
+
+
 
 
 //about us read more

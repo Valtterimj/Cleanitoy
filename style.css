@@ -36,7 +36,6 @@ body {
 .navbar__container {
     display: flex;
     justify-content: space-between;
-    height: 80px;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
@@ -136,10 +135,6 @@ body {
     .navbar__container {
         display: flex;
         justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
         padding: 0;
     }
 
@@ -248,7 +243,6 @@ body {
     right: 0;
     width: 100%;
     height: 90vh;
-    display: flex;
     align-items: center;
     background: #111;
     color: #fff;
@@ -271,39 +265,41 @@ body {
 }
 
 .main__content {
-    position: absolute;
-    left: 50px;
-    bottom: -75px;
-    opacity: 0.5;
+    position: fixed;
+    left: 25px;
     z-index: 2;
+    transition: top 0.3s;
 }
 
-.main__content.show {
+.main__content__text{
     position: fixed;
-    opacity: 1;
-    left: 50px;
-    bottom: 70px;
-    z-index: 2;
-    transition: opacity 0.5s ease-in-out;
+    bottom: 100px;
+}
+
+.button__holder{
+    position: fixed;
+    bottom: 20px;
+}
+
+.btnNone{
+    display: none;
 }
 
 
 
 .main__content h1 {
-    font-size: 5em;
-    font-weight: 800;
+    font-size: 90px;
+    font-weight: lighter;
     line-height: 1em;
     text-transform: uppercase;
     transition: opacity 0.5s ease-out;
 }
 
 .main__content h3 {
-    font-size: 3em;
-    font-weight: 700;
+    font-size: 50px;
     line-height: 1em;
     text-transform: uppercase;
     max-width: 550px;
-    margin-top: 10px;
     transition: opacity 0.5s ease-out;
 }
 
@@ -313,14 +309,14 @@ body {
     align-items: center;
     text-decoration: none;
     padding: 15px 20px;
-    height: 100%;
+    margin-top: 30px;
+    height: 50px;
     width: 300px;
     border: none;
     outline: none;
     border-radius: 33px;
     background-color: #aba7a7;
     color: #fff;
-    margin-top: 30px;
     margin-left: 30px;
     font-size: 1em;
     letter-spacing: 2px;
@@ -335,53 +331,21 @@ body {
     letter-spacing: 3px;
 }
 
-@media screen and (max-width: 960px) {
-    
+
+@media screen and (max-width: 767px) {
     .main__content h1 {
-        font-size: 3em;
-        font-weight: 1000;
-        line-height: 1em;
-        text-transform: uppercase;
-    }
-    
-    .main__content h3 {
-        font-size: 2em;
-        font-weight: 700;
-        line-height: 1em;
-        text-transform: uppercase;
-        max-width: 550px;
-        margin-top: 10px;
+        font-size: 55px;
     }
 
-    .main__content .main__btn {
-        width: 200px;
+    .main__content h3 {
+        font-size: 34px;
+    }
+    
+    .main__content .main__btn{
+        width: 250px;
     }
     
 }
-
-@media screen and (max-width: 700px) {
-
-    .main__content {
-        left: 25px;
-    }
-    .main__content.show{
-        left: 25px;
-    }
-
-    .main__content h1 {
-        font-size: 2.5em;
-    }
-    
-    .main__content h3 {
-        font-size: 1.5em;
-    }
-
-    .showcase {
-        margin-bottom: 0;
-    }
-}
-
-
 
 /* About us section  */
 
@@ -481,9 +445,10 @@ body {
 
 
 .palvelut {
+    position: relative;
     display: flex;
     padding-top: 60px;
-    z-index: 6;
+    z-index: 10;
     height: 205vh;
     background: #111;
     text-align: center;
@@ -698,6 +663,8 @@ body {
 
  /* form section  */
  .form--section{
+    position: relative;
+    z-index: 12;
     background-color: #818181;
 }
 
