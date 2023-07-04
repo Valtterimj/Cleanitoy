@@ -519,7 +519,10 @@ body {
     -webkit-touch-callout: none;
 }
 
-
+.sboxImg{
+    width: 350px;
+    height: 250px;
+}
 
 /* text and descriptions  */
 
@@ -599,7 +602,7 @@ body {
         padding-top: 110px;
         padding-left: 30px;
         padding-right: 30px;
-        height: 270vh;
+        height: 280vh;
     }
 
     .column__left {
@@ -616,8 +619,12 @@ body {
     .description:not(first-child){
         margin-top: 100px;
     }
-    
 
+    .lastones{
+        padding-top: 30px;
+        margin-bottom: 10px;
+        padding-top: 15px;
+    }
     .descriptionPic{
         margin-top: 70px;
         display: flex;
@@ -928,6 +935,11 @@ textarea:not(:focus):valid ~ .message-label{
 
 }
 
+/* new image track */
+
+.new_imgtrack{
+    margin-top: 70px;
+}
 
 /* business  */
 
