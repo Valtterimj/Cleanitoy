@@ -932,7 +932,7 @@ textarea:not(:focus):valid ~ .message-label{
 }
 
 .business {
-    padding: 50px 80px 30px 80px;
+    padding: 70px 80px 30px 80px;
     max-width: 1000px;
     text-align: center;
     align-items: center;
