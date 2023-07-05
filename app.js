@@ -24,12 +24,28 @@ const lockInPoint = aboutSectionRect.top - mainContentTextRect.bottom;
 
 window.addEventListener('scroll', function() {
 
+    const text = document.querySelector(".main__content__text");
+    const show = document.querySelector(".showcase")
+    const btnHolder = document.querySelector('.button__holder');
+
+    const textRect = text.getBoundingClientRect();
+    const showRect = show.getBoundingClientRect();
+    const btnRect = btnHolder.getBoundingClientRect();
+
+    // if (btnRect.top <= showRect.top) {
+    //     text.style.bottom = this.window.pageYOffset + 'px';
+    // }
+
+    // if (textRect.bottom >= showRect.bottom) {
+    //     // text.style.bottom = this.window.pageYOffset + 'px';
+    // }
+
     if (window.pageYOffset >= lockInPoint) {
-        mainContentText.style.bottom = window.pageYOffset + 'px';
+        mainContentText.style.bottom = window.pageYOffset + 80 +'px';
         mainContentText.style.opacity = '0.5';
         btnHolder.classList.add("btnNone");
     } else {
-        mainContentText.style.bottom = '100px';
+        mainContentText.style.bottom = '200px';
         mainContentText.style.opacity = '1';
         btnHolder.classList.remove("btnNone");
     }
