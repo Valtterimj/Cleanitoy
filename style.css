@@ -240,6 +240,7 @@ body {
 }
 
 .showcase {
+    display: flex;
     right: 0;
     width: 100%;
     align-items: center;
@@ -254,7 +255,6 @@ body {
 }
 
 .landingPage {
-    position: absolute;
     top: 0;
     left: 0;
     height: 90vh;
@@ -262,16 +262,18 @@ body {
     object-fit: cover;
     user-select: none;
     -webkit-touch-callout: none;
+    z-index: 2;
 }
 
 .main__content {
-    position: fixed;
+    position: absolute;
     left: 25px;
-    z-index: 2;
+    top: 330px;
+    z-index: 1;
     transition: top 0.3s;
 }
 
-.main__content__text{
+/* .main__content__text{
     position: fixed;
     bottom: 200px;
 }
@@ -279,7 +281,7 @@ body {
 .button__holder{
     position: fixed;
     bottom: 120px;
-}
+} */
 
 .btnNone{
     display: none;
@@ -334,6 +336,10 @@ body {
 
 
 @media screen and (max-width: 767px) {
+    .main__content {
+        top: 400px;
+    }
+
     .main__content h1 {
         font-size: 47px;
     }
@@ -348,9 +354,6 @@ body {
         padding: 5px 10px;
     }
 
-    .showcase{
-        /* height: 80vh; */
-    }
     
 }
 

@@ -40,16 +40,32 @@ window.addEventListener('scroll', function() {
     //     // text.style.bottom = this.window.pageYOffset + 'px';
     // }
 
-    if (window.pageYOffset >= lockInPoint) {
-        mainContentText.style.bottom = window.pageYOffset + 80 +'px';
-        mainContentText.style.opacity = '0.5';
-        btnHolder.classList.add("btnNone");
-    } else {
-        mainContentText.style.bottom = '200px';
-        mainContentText.style.opacity = '1';
-        btnHolder.classList.remove("btnNone");
+    // if (window.pageYOffset >= lockInPoint) {
+    //     mainContentText.style.bottom = window.pageYOffset + 80 +'px';
+    //     mainContentText.style.opacity = '0.5';
+    //     btnHolder.classList.add("btnNone");
+    // } else {
+    //     mainContentText.style.bottom = '200px';
+    //     mainContentText.style.opacity = '1';
+    //     btnHolder.classList.remove("btnNone");
+    // }
+    if (textRect.bottom < showRect.bottom || lockInPoint > this.window.pageYOffset){
+        const txt = document.querySelector('.main__content');
+        let position = window.pageYOffset;
+        txt.style.transform = 'translateY(' + (position) * .6 + 'px)';
+        if (textRect.bottom <= showRect.bottom) {
+            text.style.opacity = '0.5';
+        }
+        if (lockInPoint > this.window.pageYOffset) {
+            text.style.opacity = '1';
+        }
     }
+    
+
+
 });
+
+
 
 
 
@@ -112,15 +128,13 @@ window.addEventListener("scroll", function(){
         if (position.top < windowHeight * 0.7) {
             e.style.opacity = "1";
         } else {
-            e.style.opacity = "0.2";
+          e.style.opacity = "0.2";
         }
     })
 
     // Service text scroll animation
     const parallaxPic = document.querySelector('.column__left');
     let scrollPosition = window.pageYOffset;
-
-    console.log(scrollPosition)
 
     parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .4 + 'px)';
 
