@@ -11,7 +11,6 @@ menu.addEventListener('click', function() {
 
 const mainContent = document.querySelector('.main__content');
 const mainContentText = document.querySelector('.main__content__text');
-const btnHolder = document.querySelector('.button__holder');
 const aboutSection = document.querySelector('.about');
 
 const mainContentRect = mainContent.getBoundingClientRect();
@@ -26,29 +25,10 @@ window.addEventListener('scroll', function() {
 
     const text = document.querySelector(".main__content__text");
     const show = document.querySelector(".showcase")
-    const btnHolder = document.querySelector('.button__holder');
 
     const textRect = text.getBoundingClientRect();
     const showRect = show.getBoundingClientRect();
-    const btnRect = btnHolder.getBoundingClientRect();
 
-    // if (btnRect.top <= showRect.top) {
-    //     text.style.bottom = this.window.pageYOffset + 'px';
-    // }
-
-    // if (textRect.bottom >= showRect.bottom) {
-    //     // text.style.bottom = this.window.pageYOffset + 'px';
-    // }
-
-    // if (window.pageYOffset >= lockInPoint) {
-    //     mainContentText.style.bottom = window.pageYOffset + 80 +'px';
-    //     mainContentText.style.opacity = '0.5';
-    //     btnHolder.classList.add("btnNone");
-    // } else {
-    //     mainContentText.style.bottom = '200px';
-    //     mainContentText.style.opacity = '1';
-    //     btnHolder.classList.remove("btnNone");
-    // }
     if (textRect.bottom < showRect.bottom || lockInPoint > this.window.pageYOffset){
         const txt = document.querySelector('.main__content');
         let position = window.pageYOffset;
@@ -64,8 +44,6 @@ window.addEventListener('scroll', function() {
 
 
 });
-
-
 
 
 

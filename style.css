@@ -273,22 +273,6 @@ body {
     transition: top 0.3s;
 }
 
-/* .main__content__text{
-    position: fixed;
-    bottom: 200px;
-}
-
-.button__holder{
-    position: fixed;
-    bottom: 120px;
-} */
-
-.btnNone{
-    display: none;
-    transition: opacity 4s ease-out;
-}
-
-
 
 .main__content h1 {
     font-size: 90px;
@@ -298,7 +282,7 @@ body {
     transition: opacity 0.5s ease-out;
 }
 
-.main__content h3 {
+.main__content h2 {
     font-size: 50px;
     line-height: 1em;
     text-transform: uppercase;
@@ -344,7 +328,7 @@ body {
         font-size: 47px;
     }
 
-    .main__content h3 {
+    .main__content h2 {
         font-size: 29px;
     }
     
@@ -390,12 +374,12 @@ body {
     padding-right: 60px;
 }
 
-.about__text h2 {
+.about__text h1 {
     font-size: 1.7em;
     margin-bottom: 40px;
 }
 
-.about__text h3 {
+.about__text h2 {
     font-weight: 600;
 }
 
@@ -444,7 +428,7 @@ body {
         padding-top: 0px;
     }
     
-    .about__text h2 {
+    .about__text h1 {
         text-align: center;
     }
 }
@@ -519,7 +503,7 @@ body {
 }
 
 
-.description h3 {
+.description h1 {
     font-size: 3em;
 }
 
@@ -697,14 +681,14 @@ body {
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
 }
 
-.form--heading h2{
+.form--heading h1{
     font-size: 3em;
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
-.form--heading p {
-    font-size: 1.3em;
+.form--heading h2 {
+    font-size: 1.2em;
 }
 
 
@@ -940,13 +924,13 @@ textarea:not(:focus):valid ~ .message-label{
     justify-content: center;
 }
 
-.business h2 {
+.business h1 {
     text-align: center;
     font-size: 3em;
     margin-bottom: 30px;
 }
 
-.business h4 {
+.business h2 {
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 30px;
