@@ -567,6 +567,8 @@ body {
     }
 
     .description{
+        padding-left: 30px;
+        padding-right: 30px;
         width: 100%;
     }
     .description:first-child {
