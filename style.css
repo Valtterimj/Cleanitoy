@@ -546,11 +546,6 @@ body {
 }
 
 
-
-
-
-
-
 @media screen and (max-width: 960px) {
 
     .palvelut{
@@ -567,8 +562,6 @@ body {
     }
 
     .description{
-        padding-left: 30px;
-        padding-right: 30px;
         width: 100%;
     }
     .description:first-child {
@@ -957,6 +950,11 @@ textarea:not(:focus):valid ~ .message-label{
     text-decoration: none;
 }
 
+@media screen and (max-width: 960px){
+    .business{
+        padding: 70px 40px 30px 40px ;
+    }
+}
 
 /* some  */
 
