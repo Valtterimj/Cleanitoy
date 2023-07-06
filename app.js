@@ -9,11 +9,9 @@ menu.addEventListener('click', function() {
 
 // title scrolling animation 
 
-const mainContent = document.querySelector('.main__content');
 const mainContentText = document.querySelector('.main__content__text');
 const aboutSection = document.querySelector('.about');
 
-const mainContentRect = mainContent.getBoundingClientRect();
 const mainContentTextRect = mainContentText.getBoundingClientRect();
 const aboutSectionRect = aboutSection.getBoundingClientRect();
 
@@ -29,10 +27,11 @@ window.addEventListener('scroll', function() {
     const textRect = text.getBoundingClientRect();
     const showRect = show.getBoundingClientRect();
 
-    if (textRect.bottom < showRect.bottom || lockInPoint > this.window.pageYOffset){
+    if (textRect.bottom < showRect.bottom || lockInPoint >= this.window.pageYOffset){
         const txt = document.querySelector('.main__content');
         let position = window.pageYOffset;
-        txt.style.transform = 'translateY(' + (position) * .6 + 'px)';
+        const translateDistance = Math.min(position * 0.6, lockInPoint);
+        txt.style.transform = 'translateY(' + translateDistance + 'px)';
         if (textRect.bottom <= showRect.bottom) {
             text.style.opacity = '0.5';
         }
@@ -41,8 +40,6 @@ window.addEventListener('scroll', function() {
         }
     }
     
-
-
 });
 
 
