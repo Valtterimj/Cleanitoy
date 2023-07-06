@@ -42,7 +42,6 @@ body {
     z-index: 1;
     width: 100vw;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 #navbar__logo {
@@ -135,11 +134,8 @@ body {
 /* social meadia navbar  */
 @media screen and (max-width: 960px) {
     .navbar__container {
-        display: flex;
-        justify-content: space-between;
         padding: 0;
         width: 100vw;
-        box-sizing: border-box;
     }
 
     .navbar__menu {
@@ -152,7 +148,7 @@ body {
         opacity: 0;
         transition: all 0.5s ease;
         height: 50vh;
-        z-index: -1;
+        z-index: 99;
         background: #131313;
     }
 
@@ -242,6 +238,7 @@ body {
 .main__container {
     background-color: #141414;
     width: 100vw;
+    z-index: 1;
 }
 
 .showcase {
@@ -267,7 +264,6 @@ body {
     object-fit: cover;
     user-select: none;
     -webkit-touch-callout: none;
-    z-index: 2;
 }
 
 .main__content {
