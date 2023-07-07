@@ -660,7 +660,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     box-sizing: border-box;
-    padding: 60px 60px 60px 60px;
+    padding: 60px;
     justify-content: space-between;
     box-sizing: border-box;
 }
