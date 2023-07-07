@@ -156,75 +156,77 @@
                         </div>
                         
                 </section>
+
                 <section class="form--section" id="ota-yhteyttä">
-                    <div class="form--container">
-                        <form class="contact-form" action="https://formsubmit.co/dc8d2f5697452051b457ede27d82ff29" method ="post" enctype="multipart/form-data">
+                        <form class="contact-form" action="https://formsubmit.co/a539d9ba7eb6010420ba88de4dcf15ff" method ="post" enctype="multipart/form-data">
                             <!-- Honeypo -->
                             <input type="text" name="_honey" style="display: none;">
                 
                             <!-- Disaple Captcha  -->
                             <input type="hidden" name="_captcha" value="false">
                 
-                            <input type="hidden" name="_next" value="https://www.cleanitoy.fi">
+                            <!-- <input type="hidden" name="_next" value="https://www.cleanitoy.fi"> -->
                                 
+                            
+
+                             <!-- title and subtitle -->
                             <div class="form--heading">
-                                <h1>Odotamme yhteydenottoasi!</h1>
-                                <h2>Lähetä kuva meille kengistäsi, niin arvioimme niiden kunnon ja kerromme miten niistä saadaan puhtaat.</h2>
+                                <h1>Kengistäsi cleanit?</h1>
                             </div>
-                
-                            <div class="form--inner">
-                
-                                <!-- first and lastname  -->
-                                <div class="name--info"> 
-                                    <div class="info--box">
-                                        <input type="text" class="input--text" name="First&nbsp;Name" id="firstName" required>
-                                        <span for="firstName" class="form-label">Etunimi</span>
-                                    </div>
-                
-                                    <div class="info--box">
-                                        <input type="text" class="input--text" name="Last&nbsp;Name" id="lastName" required>
-                                        <span for="lastName" class="form-label">Sukunimi</span>
-                                    </div>
-                
-                                </div>  
-                
-                                <!-- email and phone number  -->
-                                <div class="email--phone">
-                                    <div class="info--box">
-                                        <input type="emial" class="input--text email" name="Email" id="email" required>
-                                        <span for="email" class="form-label">Sähköposti</span>
-                                    </div>
-                                    <div class="info--box">
-                                        <input type="number" placeholder=" " class="input--phone phone" name="Phone" id="phone">
-                                        <span for="phone" class="form-label">Puhelin</span>
-                                    </div>
+
+                            <div class="form--description">
+                                <h2>Lähetä kuva kengistäsi, me kerromme miten niistä saadaan puhtaat.</h2>
+                            </div>
+                            
+
+                            <div class="input-group">
+                                <input type="text" class="input--text" name="First&nbsp;Name" id="firstName" required>
+                                <span for="firstName" class="form-label">Etunimi</span>
+                            </div>
+        
+                            <div class="input-group">
+                                <input type="text" class="input--text" name="Last&nbsp;Name" id="lastName" required>
+                                <span for="lastName" class="form-label">Sukunimi</span>
+                            </div>
+        
+
+                            <div class="input-group">
+                                <input type="emial" class="input--text" name="Email" id="email" required>
+                                <span for="email" class="form-label">Sähköposti</span>
+                            </div>
+
+                            <div class="input-group">
+                                <input type="number" class="input--phone" name="Phone" id="phone" placeholder=" ">
+                                <span for="phone" class="form-label">Puhelin</span>
+                            </div>
+
+                            <div class="message--info">
+                                <h3>Lisätietoa kengistäsi.</h3>
+                                <p class="m-text">Tuleeko kengillesi basic clean vai huolellinen cleanit pesu? Onko muita toiveita; pohjan liimaaminen, nahanpaikkaus, maalaus? Ilmoita myös kenkäparien määrä ja tarvittaessa erittele niille tulevat palvelut.</p>
+                            </div>    
+                                
+                            <div class="input-group">
+                                <textarea class="message--text" type="message" name="Message" id="message" cols="30" rows="10" required></textarea>
+                                <span for="message" class="message-label">Lisätiedot kengistäsi</span>
+                            </div>
+                               
+
+
+                            <div class="drop--zone">
+                                <h3 class="drop--zone--text">Lisää kuva kengistäsi.</h3>
+
+            
+                                <div class="drop--zone--image" >
+                                    <input type="file" name="file__pic" id="file__pic" class="drop--zone--input" accept="image/png, image/jpg" multiple>
+                                    <label for="file__pic" class="drop--zone--prompt"><strong>Valitse tiedosto</strong> tai raahaa se tähän</label>  
                                 </div>
-                                    
-                                    
-                                <!-- message -->
-                                <div class="message--image">
-                                    <p class="serviceText">Kerro lisätietoa kengistäsi. Tuleeko kengillesi basic clean vai huolellinen cleanit pesu? Onko muita toiveita; pohjan liimaaminen, nahanpaikkaus, maalaus? Ilmoita myös kenkäparien määrä ja tarvittaessa erittele niille tulevat palvelut.</p>
-                                    <div class="message--box">
-                                        <textarea class="message--text" type="message" name="Message" id="message" cols="30" rows="10" required></textarea>
-                                        <span for="message" class="message-label">Lisätiedot kengistäsi</span>
-                                    </div>
-                                </div>
-                
-                                <div class="drop--zone">
-                                    <div class="drop--zone--text">
-                                        <p class="imgText">Lisää kuva kengistäsi</p>
-                                    </div>
-                
-                                    <div class="drop--zone--image" >
-                                        <input type="file" name="file__pic" id="file__pic" class="drop--zone--input" accept="image/png, image/jpg" multiple>
-                                        <label for="file__pic" class="drop--zone--prompt"><strong>Valitse tiedosto</strong> tai raahaa se tähän</label>  
-                                    </div>
-                                </div>
-                                    
+                            </div>
+
+                            <div class="submit-box">
                                 <button type="submit" name="Submit" class="submit--button">Lähetä</button>
-                            </div>      
+                            </div>
+
                         </form>
-                    </div>
                 </section>
                 <section class="image-track new_imgtrack">
                     <img src="img/uudelleenmaalaus.jpeg" alt="nahkakengän uudelleenmaalaus" class="sPic" draggable="false">

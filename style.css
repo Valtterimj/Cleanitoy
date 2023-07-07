@@ -246,6 +246,7 @@ body {
     display: flex;
     right: 0;
     width: 100%;
+    max-width: 100%;
     align-items: center;
     background: #111;
     color: #fff;
@@ -351,7 +352,8 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     height: 65vh;
     justify-self: center;
     text-align: center;
@@ -437,7 +439,8 @@ body {
     padding-top: 60px;
     z-index: 10;
     height: 220vh;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     background: #111;
     text-align: center;
     box-sizing: border-box;
@@ -516,12 +519,14 @@ body {
 /* image track  */
 
 .image-track {
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     text-align: center;
     align-items: center;
     display: flex;
     background: #111;
     z-index: 11;
+    margin-top: 50px;
     gap: 4vmin;
     left: 50%; transform: translate(0%, 0%);
     overflow-x: auto;
@@ -640,192 +645,167 @@ body {
 
  /* form section  */
  .form--section{
-    position: relative;
-    z-index: 12;
-    background-color: #818181;
-    width: 100vw;
-    box-sizing: border-box;
-}
-
-.form--container{
-    margin: 0 auto;
-    max-width: 900px;
+    display: flex;
+    background-color: #d7d7d7;    
+    justify-content: center;
+    justify-items: center;
     width: 100%;
-    height: 135vh;
-    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.25);
-    z-index: -5;
-    padding-top: 50px;
+    max-width: 100%;
+}
+
+.contact-form{
+    width: 100%;
+    height: 130vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    box-sizing: border-box;
+    padding: 60px 60px 60px 60px;
+    justify-content: space-between;
     box-sizing: border-box;
 }
 
-/* heading  */
 .form--heading{
-    font-weight: normal;
-    padding: 20px;
-    color: #fff;
     text-align: center;
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.1);
-    box-sizing: border-box;
+    font-size: 25px;
+    
 }
 
-.form--heading h1{
-    font-size: 40px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+.form--description{
+    font-size: 15px;
+    
 }
 
-.form--heading h2 {
-    font-size: 1.2em;
-}
+/* contact information  */
 
 
-/* inner part  */
-
-.form--inner{
-    padding: 60px;
-}
-
-
-/* contact info and message */
-
-.name--info{
-    display: flex;
-    justify-content: space-between;
-}
-
-.email--phone{
-    display: flex;
-    justify-content: space-between;
-}
-
-.info--box, .message--box {
+.input-group{
+    margin-bottom: 20px;
     position: relative;
-    margin-bottom: 30px;
-
 }
-
-.input--text, textarea, .input--phone {
-    width: 300px;
-    height: 45px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-    font-size: 14px;
-}
-
-.input--text:focus,
-.input--phone:focus,
-.textarea:focus{
-    outline: 0;
-    border-bottom: 2px solid #fff;
-}
-
-.input--phone:focus ~ .form-label,
-.input--phone:not(:placeholder-shown):not(:focus) ~.form-label{
-    top: -15px;
-    left: 0;
-    font-size: 11px;
-}
-
-.input--text:focus ~ .form-label,
-.input--text:not(:focus):valid ~ .form-label{
-    top: -15px;
-    left: 0;
-    font-size: 11px;
-}
-
-
-
-textarea{
-    margin-top: 30px;
-    min-height: 80px;
+.input--text,
+.input--phone{
     width: 100%;
-    margin-bottom: 10px;;
+    height: 60px;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid #111;
+    background: transparent;
+    color: #111;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
 }
 
-textarea:focus ~ .message-label,
-textarea:not(:focus):valid ~ .message-label{
-    top: 10px;
-    left: 0;
-    font-size: 11px;
-}
-
-.form-label, .message-label{
+.form-label{
     position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 40px;
+    padding: 15px 5px;
+    font-size: 18px;
+    color: #111;
+    cursor: text;
+    transition: 0.2s;
     pointer-events: none;
-    transition: .2s ease all;
-    font-size: 16px;
-    color: #fff;
-    top: 15px;
-    left: 1px;
-     
-}
-.message-label{
-    top: 30px;
 }
 
-.message--image{
-    margin-top: 30px;
-    color: #fff;
+.input--text:focus~.form-label,
+.input--text:valid~.form-label,
+.input--phone:focus~.form-label,
+.input--phone:not(:placeholder-shown):not(:focus) ~.form-label{
+    top: -30px;
+    font-size: 15px;
+    z-index: 2;
 }
+
+/* message  */
+
+
+.message--info h3{
+    position: relative;
+    text-align: start;
+    top: -30px;
+    font-size: 20px;
+}
+
+.message--text {
+    width: 100%;
+    height: 100px;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid #111;
+    background: transparent;
+    color: #111;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.message-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 5px;
+    font-size: 18px;
+    color: #111;
+    cursor: text;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+
+
+.message--text:focus~.message-label,
+.message--text:valid~.message-label{
+    top: -30px;
+    font-size: 15px;
+    z-index: 2;
+} 
 
 
 /* picture  */
 
-
 .drop--zone{
-    margin-top: 25px;
-    margin-bottom: 45px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
+    color: #111;
     gap: 20px;
 }
 
 .drop--zone--text{
     flex: 1;
     font-size: 20px;
+    padding-top: 20px;
 }
 
 .drop--zone--image{
     flex: 2;
     width: 150px;
-    height: 150px;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 500;
-    font-size: 18px;
+    height: 100px;
     border-radius: 10px;
     z-index: 5;
+    color: #111;
 }
 
+
 .drop--zone--input{
-    width: 300px;
-    height: 200px;
-    max-height: 100%;
-    max-width: 100%;
-    
-    color: #fff;
+    height: 100%;
+    width: 100%;
+    color: #111;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.15);
-    border: 2px #fff dashed;
+    border: 2px #111 dashed;
     border-radius: 10px;
     cursor: pointer;
 }
 
 
 .drop--zone--input:hover{
-    border: 2px #fff solid;
+    border: 2px #111 solid;
 }
 
 .drop--zone--input::-webkit-file-upload-button{
-    color: #fff;
+    color: #111;
     margin-top: 30px;
     padding: 10px 20px;
     border: none;
@@ -839,68 +819,54 @@ textarea:not(:focus):valid ~ .message-label{
    display: none;
 }
 
-
 /* submit Button  */
+
+.submit-box{
+    width: 100%;
+    padding: 0 25px;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
 
 .submit--button{
     cursor: pointer;
     border-radius: 3px;
     padding: 15px;
     width: 100%;
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
     border: none;
     font-size: 16px;
     background: transparent;
-    color: #fff;
+    color: #111;
 }
 
 .submit--button:hover{
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.7);
 }
 .submit--button:focus{
     outline: 0;
 }
 
+
+/* media form  */
+
+
 @media screen and (max-width: 960px) {
-    .form--section{
-        width: 100vw;
-    }
 
-    .form--container{
-        width: 100%;
-        height: 175vh;
-        box-sizing: border-box;
-    }
+   .contact-form{
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 30px;
+    box-sizing: border-box;
+   }
 
-    .form--heading h1{
-        font-size: 30px;
-
-    }
-
-    .name--info{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .email--phone{
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .input--text, textarea, .input--phone {
-        width: 400px;
-        max-width: 100%;
-    }
-
+   .form--description{
+    text-align: center;
+   }
 
 
 }
 
-/* new image track */
-
-.new_imgtrack{
-    margin-top: 70px;
-}
 
 /* business  */
 
@@ -917,6 +883,7 @@ textarea:not(:focus):valid ~ .message-label{
 .business {
     padding: 70px 80px 30px 80px;
     max-width: 100vw;
+    max-width: 100%;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -965,6 +932,7 @@ textarea:not(:focus):valid ~ .message-label{
 .some {
     height: 35vh;
     width: 100vw;
+    max-width: 100%;
     background: #111;
 }
 
