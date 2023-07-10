@@ -107,11 +107,11 @@ window.addEventListener("scroll", function(){
         }
     })
 
-    // Service text scroll animation
-    const parallaxPic = document.querySelector('.column__left');
-    let scrollPosition = window.pageYOffset;
+    // // Service text scroll animation
+    // const parallaxPic = document.querySelector('.column__left');
+    // let scrollPosition = window.pageYOffset;
 
-    parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .4 + 'px)';
+    // parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .4 + 'px)';
 
 
    
