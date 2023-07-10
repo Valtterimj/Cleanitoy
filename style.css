@@ -484,9 +484,21 @@ body {
     box-sizing: border-box;
     }
 
+    .description{
+        max-width: 100%;
+    }
+
+
     .description p {
         max-width: 100%;
         margin-bottom: 20px;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+
+    .sPic{
+        max-width: 300px;
+        align-self: center;
     }
 }
 
