@@ -106,14 +106,6 @@ window.addEventListener("scroll", function(){
           e.style.opacity = "0.2";
         }
     })
-
-    // // Service text scroll animation
-    // const parallaxPic = document.querySelector('.column__left');
-    // let scrollPosition = window.pageYOffset;
-
-    // parallaxPic.style.transform = 'translateY(' + (-scrollPosition + 1000) * .4 + 'px)';
-
-
    
 });
 
