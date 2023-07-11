@@ -109,12 +109,12 @@ body {
     border: none;
     outline: none;
     border-radius: 4px;
-    background-color: #aba7a7;
-    color: #fff;
+    background-color: #d7d7d7;
+    color: #111;
 }
 
 .button:hover {
-    background-image: linear-gradient(to top, #818181 0%,#e3dcdc 100%);
+    background-image: linear-gradient(to top, #d7d7d7 0%, #8d8d8d 100%);
     transition: all 0.3s ease;
 }
 
@@ -305,20 +305,19 @@ body {
     border: none;
     outline: none;
     border-radius: 33px;
-    background-color: #aba7a7;
-    color: #fff;
+    background-color: #d7d7d7;
+    color: #111;
     margin-left: 30px;
     font-size: 1em;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: opacity 2s ease-out;
     z-index: 3;
 }
 
 .main__content .main__btn:hover {
-    background-image: linear-gradient(to top, #818181 0%,#e3dcdc 100%);
     transition: all 0.3s ease;
     cursor: pointer;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 
@@ -352,13 +351,12 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
+    width: 100vw;
     max-width: 100%;
-    height: 65vh;
     justify-self: center;
     text-align: center;
-    background-color: #818181;
-    color: #fff;
+    background-color: #d7d7d7;
+    color: #111;
     z-index: 10;
     overflow: hidden;
 }
@@ -386,32 +384,11 @@ body {
     margin-top: 15px;
 }
 
-#more, #us-more{
-    display: none;
-}
-
-.readBtn{
-    margin-top: 15px;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 100;
-    text-decoration: underline;
-}
-
-.readBtn:hover{
-    font-weight: 150;
-    font-size: 16px;
-    
-
-}
 
 @media screen and (max-width: 960px) {
     .about{
         grid-template-columns: 100%;
-        height: 120vh;
+        height: auto;
         margin-top: 0;
     }
 
@@ -498,7 +475,7 @@ body {
 
     .sPic{
         width: 300px;
-        /* max-width: 300px; */
+        max-width: 300px;
         align-self: center;
     }
 }
@@ -863,28 +840,21 @@ body {
 }
 
 /* some  */
-
 .some {
-    height: 35vh;
     width: 100vw;
     max-width: 100%;
-    background: #111;
-}
-
-.some-container{
-    width: 100%;
-    padding-top: 50px;
-    padding-left: 75px;
-    padding-right: 75px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    color: #fff;
+    background-color: #d7d7d7;
+    padding: 30px 50px;
+    color: #111;
     box-sizing: border-box;
 }
 
 .some-text{
+    width: 100%;
     margin-bottom: 50px;
+    text-align: center;
+    padding: 0 30px;
+    box-sizing: border-box;
 }
 
 .some-icons{
@@ -892,14 +862,13 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: center;
-    gap: 120px;
+    justify-content: space-around;
 }
 
 .fa-brands{
-    color: #fff;
+    color: #111;
     z-index: 15;
-    font-size: 130px;
+    font-size: 100px;
 }
 
 

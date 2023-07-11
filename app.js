@@ -47,22 +47,22 @@ window.addEventListener('scroll', function() {
 
 
 
-//about us read more
-function readMore() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
+// //about us read more
+// function readMore() {
+//     var dots = document.getElementById("dots");
+//     var moreText = document.getElementById("more");
+//     var btnText = document.getElementById("myBtn");
   
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Enemmän"; 
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Vähemmän"; 
-      moreText.style.display = "inline";
-    }
-}
+//     if (dots.style.display === "none") {
+//       dots.style.display = "inline";
+//       btnText.innerHTML = "Enemmän"; 
+//       moreText.style.display = "none";
+//     } else {
+//       dots.style.display = "none";
+//       btnText.innerHTML = "Vähemmän"; 
+//       moreText.style.display = "inline";
+//     }
+// }
 
 function readMoreUs() {
     var dots = document.getElementById("us-dots");
