@@ -28,3 +28,6 @@ INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (e
 2023.07.11 12:30:19 INFO  time: initialize in 0.56s
 2023.07.11 12:30:20 WARN  Build server is not auto-connectable.
 2023.07.11 12:30:20 WARN  no build tool detected in workspace '/Users/valtterimj/Downloads/Työ/Cleanit Oy/Cleanitoy.fi-verkkosivut'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.07.11 15:27:38 INFO  Shutting down server
+2023.07.11 15:27:38 INFO  shutting down Metals
+2023.07.11 15:27:38 INFO  Exiting server
