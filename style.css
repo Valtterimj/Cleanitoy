@@ -895,7 +895,10 @@ body {
 
 .success_message{
     width: 100%;
-    padding: 80px 50px;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 50px;
     box-sizing: border-box;
 }
 
@@ -911,7 +914,7 @@ body {
 
 .success_some {
     width: 100%;
-    padding: 0 50px 50px 80px;
+    margin-bottom: 20px;
 }
 
 .success_some h3 {
